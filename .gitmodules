@@ -1,0 +1,15 @@
+[submodule "at45db"]
+	path = at45db
+	url = https://github.com/aztechsk/at45db
+[submodule "cmdln"]
+	path = cmdln
+	url = https://github.com/aztechsk/cmdln
+[submodule "freertos"]
+	path = freertos
+	url = https://github.com/aztechsk/freertos-sam-cm3-cm4
+[submodule "sys"]
+	path = sys
+	url = https://github.com/aztechsk/sys-tools
+[submodule "ucdrv"]
+	path = ucdrv
+	url = https://github.com/aztechsk/sam-lib
