@@ -10,6 +10,3 @@
 [submodule "sys"]
 	path = sys
 	url = https://github.com/aztechsk/sys-tools
-[submodule "ucdrv"]
-	path = ucdrv
-	url = https://github.com/aztechsk/sam-lib
