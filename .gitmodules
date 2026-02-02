@@ -7,3 +7,12 @@
 [submodule "hal"]
 	path = hal
 	url = https://github.com/aztechsk/c-hal-headers
+[submodule "sys"]
+	path = sys
+	url = https://github.com/aztechsk/sys-tools
+[submodule "ucdrv"]
+	path = ucdrv
+	url = https://github.com/aztechsk/sam-lib
+[submodule "at45db"]
+	path = at45db
+	url = https://github.com/aztechsk/at45db
