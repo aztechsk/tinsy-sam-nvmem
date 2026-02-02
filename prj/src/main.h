@@ -8,8 +8,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-extern const char *const cmd_accp;
-extern spim spi;
+extern spibus spi;
 
 /**
  * get_v_major

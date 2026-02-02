@@ -44,16 +44,16 @@ void init_at45dbtest(void)
         f0->spi = spi;
         f0->csel.ini = TRUE;
         f0->csel.mode = 0;
-        f0->csel.csn = SPIM_CSEL1;
+        f0->csel.csn = SPI_CSEL1;
         f0->csel.dlybct = 0;
         f0->csel.dlybs = 0;
-        f0->csel.scbr = spim_scbr_mhz(32);
-        f0->csel.bits = SPIM_8_BIT_TRANS;
+        f0->csel.scbr = spi_scbr_mhz(32);
+        f0->csel.bits = SPI_8_BIT_TRANS;
         f0->csel.csrise = FALSE;
         f0->id = "0";
         f0->use_dma = TRUE;
         f0->buf2_ff = FALSE;
-#if SPIM_CSEL_LINE_ERR == 1
+#if SPI_CSEL_LINE_ERR == 1
 	f0->csel.csel_pin = PIO_PA9;
         f0->csel.csel_cont = PIOA;
 #endif
@@ -102,7 +102,7 @@ static void tsk(void *p)
 	} else {
 		msg(INF, "at45dbtest.c: %d %s fail!!!\n", tr, (tr == 1) ? "test" : "tests");
 	}
-        log_spim_stats(f0->spi);
+        log_spi_stats(f0->spi);
         vTaskSuspend(NULL);
 }
 #else

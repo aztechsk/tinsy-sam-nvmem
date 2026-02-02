@@ -38,9 +38,7 @@
 #include "main.h"
 #include <string.h>
 
-const char *const cmd_accp = ">>\n";
-
-spim spi;
+spibus spi;
 
 static void sleep_pin_cfg(boolean_t b);
 static void set_clocks_sleep(boolean_t b);
@@ -132,7 +130,7 @@ int main(void)
 	memset(spi, 0, sizeof(*spi));
         spi->id = ID_SPI;
 	spi->dlybcs = 0;
-	init_spim(spi);
+	init_spi(spi);
 	// MISO.
         conf_io_pin(PIO_PA12, PIOA, PIO_PERIPH_A, PIO_PULL_UP_OFF, PIO_END_OF_FEAT);
         // MOSI.
@@ -418,7 +416,7 @@ static void cmd_slp1(void)
 static void cmd_spis(void)
 {
 	msg(INF, cmd_accp);
-	log_spim_stats(spi);
+	log_spi_stats(spi);
 }
 
 /**
